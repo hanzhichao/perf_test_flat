@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Performance Test</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-default">
+        <div class="navbar-heading">
+            <div class="navbar-brand"><a href="#">PerfTestFlat</a></div>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="./">Home</a></li>
+            <li class="active"><a href="./wrk">Wrk</a></li>
+            <li><a href="./nmon">Nmon</a></li>
+            <li><a href="./report">Report</a></li>
+        </ul>
+    </nav>
+	<div class="page-header"><h1>Performance Test</h1></div>
+    <div class="col-md-4 col-sm-6" style="padding-left: 0px;">
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="panel-title">Wrk</div>
+            </div>
+            <div class="panel-body">
+                <form class="form" action="" method="post">
+                    <div class="form-group">
+                        <label>Method:</label>
+                        <select name="methods" class="form-control">
+                            <option label="http" value="http">http</option>
+                            <option label="https" value="https">https</option>
+                        </select></div>
+                    <div class="form-group">
+                        <label>Connection:</label>
+                        <select name="connection" class="form-control">
+                            <option value="keep-alive">keep-alive</option>
+                            <option value="close">close</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">Url:</span>
+                            <input type="text" class="form-control" name="url">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">C:</span>
+                            <input type="text" class="form-control" name="c">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">T:</span>
+                            <input type="text" class="form-control" name="t">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">D:</span>
+                            <input type="text" class="form-control" name="d">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="panel-footer">by Hanzhichao</div>
+        </div>
+    </div>
+	<div class="col-md-8 col-sm-6" style="padding-right: 0px">
+		<div class="panel panel-primary">
+			<div class="panel-heading"><div class="panel-title">Wrk Result</div></div>
+			<div class="panel-body">{{ result|safe  }}</div>
+			<div class="panel-footer">by Hanzhichao</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

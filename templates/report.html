@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Report</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-default">
+        <div class="navbar-heading">
+            <div class="navbar-brand"><a href="#">PerfTestFlat</a></div>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="./">Home</a></li>
+            <li><a href="./wrk">Wrk</a></li>
+            <li><a href="./nmon">Nmon</a></li>
+            <li class="active"><a href="./report">Report</a></li>
+        </ul>
+    </nav>
+    <div class="page-header"><h1>Report</h1></div>
+	<div class="panel"><img src="{{ url_for('static', filename='report/img/CPU_vs_Time.png') }}"></div>
+	<div class="panel"><img src="{{ url_for('static', filename='report/img/Disk_Busy_vs_Time.png') }}"></div>
+	<div class="panel"><img src="{{ url_for('static', filename='report/img/Memory_vs_Time.png') }}"></div>
+</div>
+
+</body>
+</html>
