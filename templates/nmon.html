@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Nmon</title>
+    <title>Performance Test</title>
     <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
 </head>
 <body>
@@ -14,11 +14,47 @@
         <ul class="nav navbar-nav">
             <li><a href="./">Home</a></li>
             <li><a href="./wrk">Wrk</a></li>
-            <li class="active"><a href="./Nmon">Nmon</a></li>
+            <li class="active"><a href="./nmon">Nmon</a></li>
             <li><a href="./report">Report</a></li>
         </ul>
     </nav>
-</div>
+	<div class="page-header"><h1>Performance Test</h1></div>
+    <div class="col-md-4 col-sm-6" style="padding-left: 0px;">
 
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="panel-title">Nmon</div>
+            </div>
+            <div class="panel-body">
+                <form class="form" action="" method="post">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">S:</span>
+                            <input type="text" class="form-control" name="s">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">C:</span>
+                            <input type="text" class="form-control" name="c">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="panel-footer">by Hanzhichao</div>
+        </div>
+    </div>
+	<div class="col-md-8 col-sm-6" style="padding-right: 0px">
+		<div class="panel panel-primary">
+			<div class="panel-heading"><div class="panel-title">Nmon Result</div></div>
+			<div class="panel-body">{{ result|safe  }}</div>
+			<div class="panel-footer">by Hanzhichao</div>
+		</div>
+	</div>
+</div>
 </body>
 </html>

@@ -1,9 +1,8 @@
-Running 5s test @ http://www.baidu.com
+Running 1s test @ http://www.163.com
   1 threads and 1 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency     0.00us    0.00us   0.00us    -nan%
-    Req/Sec     0.00      0.00     0.00      -nan%
-  0 requests in 5.04s, 0.00B read
-  Socket errors: connect 0, read 363, write 0, timeout 0
-Requests/sec:      0.00
-Transfer/sec:       0.00B
+    Latency    73.77ms   13.87ms  98.56ms   80.00%
+    Req/Sec     6.40      3.36    10.00     40.00%
+  5 requests in 1.00s, 0.88KB read
+Requests/sec:      4.99
+Transfer/sec:      0.88KB

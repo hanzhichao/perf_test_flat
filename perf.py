@@ -34,8 +34,14 @@ def perf():
     return render_template("wrk.html", result=result)
 
 
-@ app.route("/nmon")
+@ app.route("/nmon", methods=["GET", "POST"])
 def nmon():
+    if request.method == "POST":
+        s = request.form["s"]
+        c = request.form["c"]
+        subprocess.Popen("nmon -s %s -c %s -F report.nmon" % (s,c),shell=True, stdout=subprocess.PIPE) 
+        sleep(int(s)*int(c))
+    subprocess.Popen("pyNmonAnalyzer -b -t static -x -o static/report -i report.nmon", shell=True,stdout=subprocess.PIPE)
     return render_template("nmon.html")
 
 @ app.route("/report")
